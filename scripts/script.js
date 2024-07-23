@@ -1,3 +1,75 @@
+function createSlide3() {
+    const slide = document.createElement('div');
+    slide.classList.add('slide');
+    slide.innerHTML = `
+    <div class="card card3">
+        <img src="images/site4.jpeg" alt="portfolio1" />
+        <div class="card-content">
+            <h3>Portfolio 1</h3>
+            <p>Portfolio 1 description</p>
+            <a href="#" class="btn">See More</a>
+        </div>
+    </div>
+    <div class="card card3">
+        <img src="images/site5.jpeg" alt="portfolio2" />
+        <div class="card-content">
+            <h3>Portfolio 1</h3>
+            <p>Portfolio 1 description</p>
+            <a href="#" class="btn">See More</a>
+        </div>
+    </div>
+    <div class="card card3">
+        <img src="images/site6.jpeg" alt="portfolio3" />
+        <div class="card-content">
+            <h3>Portfolio 1</h3>
+            <p>Portfolio 1 description</p>
+            <a href="#" class="btn">See More</a>
+        </div>
+    </div>
+    `;
+    return slide;
+}
+
+function createSlide2() {
+    const slide = document.createElement('div');
+    slide.classList.add('slide');
+    slide.innerHTML = `
+    <div class="card card2">
+        <img src="images/site4.jpeg" alt="portfolio1" />
+        <div class="card-content">
+            <h3>Portfolio 1</h3>
+            <p>Portfolio 1 description</p>
+            <a href="#" class="btn">See More</a>
+        </div>
+    </div>
+    <div class="card card2">
+        <img src="images/site5.jpeg" alt="portfolio2" />
+        <div class="card-content">
+            <h3>Portfolio 1</h3>
+            <p>Portfolio 1 description</p>
+            <a href="#" class="btn">See More</a>
+        </div>
+    </div>
+    `;
+    return slide;
+}
+
+function createSlide1() {
+    const slide = document.createElement('div');
+    slide.classList.add('slide');
+    slide.innerHTML = `
+    <div class="card card1">
+        <img src="images/site4.jpeg" alt="portfolio1" />
+        <div class="card-content">
+            <h3>Portfolio 1</h3>
+            <p>Portfolio 1 description</p>
+            <a href="#" class="btn">See More</a>
+        </div>
+    </div>
+    `;
+    return slide;
+}
+
 let slideIndex = 0;
 const slides = document.getElementsByClassName("slide");
 
@@ -48,6 +120,7 @@ function showSlide(n, direction = 'right') {
 
 function addBottons() {
     var divParent = document.getElementById('slide-moves'); // Assuming 'slide-moves' is the ID of the parent div for buttons
+    divParent.innerHTML = ''; // Clear the parent div
 
     for (let i = 0; i < slides.length; i++) {
         var span = document.createElement('span');
@@ -74,6 +147,26 @@ function plusSlidesLeft(n) {
     showSlide(slideIndex, 'left');
 }
 
+function responsiveSlide() {
+    const portfolioSlide = document.querySelector('.portfolio-slide');
+    portfolioSlide.innerHTML = ''; 
+
+    if (window.innerWidth >= 1000) {
+        portfolioSlide.appendChild(createSlide3());
+        portfolioSlide.appendChild(createSlide3());
+        portfolioSlide.appendChild(createSlide3());
+    } else if (window.innerWidth >= 768) {
+        portfolioSlide.appendChild(createSlide2());
+        portfolioSlide.appendChild(createSlide2());
+    } else if (window.innerWidth >= 500) {
+        portfolioSlide.appendChild(createSlide1());
+    }
+    addBottons();
+    showSlide(slideIndex, 'right');
+}
+
+responsiveSlide();
+window.addEventListener('resize', responsiveSlide);
 
 const prev = document.getElementById('moveLeft');
 
