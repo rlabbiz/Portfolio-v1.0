@@ -30,4 +30,18 @@
     .mobile-menu-icon {
         display: block;
     }
+
+    .header-section-links {
+        display: none;
+    }
+
+    .header-image {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .header-image {
+        display: none;
+    }
 }
