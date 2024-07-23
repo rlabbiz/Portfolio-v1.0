@@ -172,3 +172,23 @@ const prev = document.getElementById('moveLeft');
 
 addBottons();
 showSlide(slideIndex, 'right');
+
+
+function mobileMenu() {
+    const menu = document.getElementsByClassName('mobile-menu-link');
+    const showBtn = document.querySelector('.mobile-menu-icon');
+
+    showBtn.addEventListener('click', () => {
+        const menu = document.querySelector('.mobile-menu');
+        menu.classList.toggle('mobile-menu-active');
+    });
+
+    document.addEventListener('click', (e) => {
+        if (e.target.classList.contains('mobile-menu-link')) {
+            const menu = document.querySelector('.mobile-menu');
+            menu.classList.toggle('mobile-menu-active');
+        }
+    });
+}
+
+mobileMenu();
