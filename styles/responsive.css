@@ -21,7 +21,6 @@
     }
 }
 
-
 @media screen and (max-width: 800px) {
     .menu {
         display: none;
@@ -43,5 +42,32 @@
 @media screen and (max-width: 1000px) {
     .header-image {
         display: none;
+    }
+
+    .contact {
+        height: 900px;
+    }
+
+    .contact .container {
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+
+    .contact-info .info-links {
+        display: none;
+    }
+
+    .contact .container .contact-info {
+        width: 80%;
+        margin: 20px 0;
+    }
+
+    .contact .container .contact-form {
+        width: 80%;
+    }
+
+    .contact .container .contact-form form {
+        width: 100%;
+        align-items: flex-start;
     }
 }
