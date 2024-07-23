@@ -1,3 +1,20 @@
-@media screen and (max-width: 600px) {
-  
+@media screen and (max-width: 950px) and (min-width: 620px) {
+    .skills .container {
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+    }
+    .skills .container .card {
+        width: 47%;
+        margin-top: 20px;
+    }
+}
+
+@media screen and (max-width: 619px) {
+    .skills .container {
+        flex-direction: column;
+    }
+    .skills .container .card {
+        width: 100%;
+        margin-top: 20px;
+    }
 }
