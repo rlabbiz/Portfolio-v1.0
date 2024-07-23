@@ -437,9 +437,20 @@ header nav .menu ul li a {
 }
 
 .slide .card {
-    width: 32%;
     height: inherit;
     position: relative;
+}
+
+.slide .card3 {
+    width: 32%;
+}
+
+.slide .card2 {
+    width: 49%;
+}
+
+.slide .card1 {
+    width: 100%;
 }
 
 .slide .card img {
