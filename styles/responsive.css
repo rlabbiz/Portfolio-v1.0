@@ -7,6 +7,8 @@
         width: 47%;
         margin-top: 20px;
     }
+
+    
 }
 
 @media screen and (max-width: 619px) {
@@ -16,5 +18,16 @@
     .skills .container .card {
         width: 100%;
         margin-top: 20px;
+    }
+}
+
+
+@media screen and (max-width: 800px) {
+    .menu {
+        display: none;
+    }
+
+    .mobile-menu-icon {
+        display: block;
     }
 }
