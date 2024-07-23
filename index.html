@@ -4,9 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/style.css" />
+    <link rel="stylesheet" href="styles/responsive.css" />
     <title>Rida Labbiz - Portfolio</title>
 </head>
 <body>
+    <div class="mobile-menu">
+        <i class="fas fa-times mobile-menu-link"></i>
+        <span class="background"></span>
+        <ul>
+            <li><a href="#home" class="mobile-menu-link">Home</a></li>
+            <li><a href="#about" class="mobile-menu-link">About</a></li>
+            <li><a href="#services" class="mobile-menu-link">Services</a></li>
+            <li><a href="#portfolio" class="mobile-menu-link">Portfolio</a></li>
+            <li><a href="#contact" class="mobile-menu-link">Contact</a></li>
+        </ul>
+    </div>
+
     <header>
         <span class="background"></span>
         <nav class="container">
@@ -22,6 +35,8 @@
                     <li><a href="#contact">Contact</a></li>
                 </ul>
             </div>
+            <div class="mobile-menu-icon">
+                <i class="fas fa-bars"></i>
         </nav>
     </header>
 
@@ -116,91 +131,13 @@
         <div class="container">
             <i onclick="plusSlidesLeft(-1)" class="fas fa-arrow-left"></i>
             <div class="portfolio-slide">
-                <div class="slide">
-                    <div class="card">
-                        <img src="images/site1 1.png" alt="portfolio1" />
-                        <div class="card-content">
-                            <h3>Portfolio 1</h3>
-                            <p>Portfolio 1 description</p>
-                            <a href="#" class="btn">See More</a>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <img src="images/site2 1.png" alt="portfolio2" />
-                        <div class="card-content">
-                            <h3>Portfolio 1</h3>
-                            <p>Portfolio 1 description</p>
-                            <a href="#" class="btn">See More</a>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <img src="images/site3 1.png" alt="portfolio3" />
-                        <div class="card-content">
-                            <h3>Portfolio 1</h3>
-                            <p>Portfolio 1 description</p>
-                            <a href="#" class="btn">See More</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="slide">
-                    <div class="card">
-                        <img src="images/site4.jpeg" alt="portfolio1" />
-                        <div class="card-content">
-                            <h3>Portfolio 1</h3>
-                            <p>Portfolio 1 description</p>
-                            <a href="#" class="btn">See More</a>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <img src="images/site5.jpeg" alt="portfolio2" />
-                        <div class="card-content">
-                            <h3>Portfolio 1</h3>
-                            <p>Portfolio 1 description</p>
-                            <a href="#" class="btn">See More</a>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <img src="images/site6.jpeg" alt="portfolio3" />
-                        <div class="card-content">
-                            <h3>Portfolio 1</h3>
-                            <p>Portfolio 1 description</p>
-                            <a href="#" class="btn">See More</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="slide">
-                    <div class="card">
-                        <img src="images/site7.jpeg" alt="portfolio1" />
-                        <div class="card-content">
-                            <h3>Portfolio 1</h3>
-                            <p>Portfolio 1 description</p>
-                            <a href="#" class="btn">See More</a>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <img src="images/site8.jpeg" alt="portfolio2" />
-                        <div class="card-content">
-                            <h3>Portfolio 1</h3>
-                            <p>Portfolio 1 description</p>
-                            <a href="#" class="btn">See More</a>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <img src="images/site9.jpeg" alt="portfolio3" />
-                        <div class="card-content">
-                            <h3>Portfolio 1</h3>
-                            <p>Portfolio 1 description</p>
-                            <a href="#" class="btn">See More</a>
-                        </div>
-                    </div>
-                </div>
             </div>
             <i id="moveRight" onclick="plusSlides(1)" class="fas fa-arrow-right"></i>
         </div>
         <div class="slide-move" id="slide-moves"></div>
     </div>
 
-    <div class="contact">
+    <div class="contact" id="contact">
         <h3 class="title">Contact</h3>
         <div class="container">
             <div class="contact-info">
